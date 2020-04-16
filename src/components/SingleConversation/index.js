@@ -55,8 +55,7 @@ class SingleConversation extends PureComponent {
 const mapStateToProps = state => {
   const conversationId = state.conversation.selectedConversation;
   return {
-    messages: state.message.byConversationId[conversationId] || [],
-    conversationId,
+    messages: state.message.byConversationId[conversationId] || [], conversationId,
   }
 }
 
