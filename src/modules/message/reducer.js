@@ -16,7 +16,8 @@ const handleSendMessageSuccess = (state, action) => {
   if (!conversationMessages) {
     state.byConversationId[message.conversationId] = [message];
   } else {
-    state.byConversationId[message.conversationId] = [message, ...conversationMessages];
+    // CHALLENGE 2: Reverse order of messages
+    state.byConversationId[message.conversationId] = [ ...conversationMessages, message ];
   }
   return state;
 };
